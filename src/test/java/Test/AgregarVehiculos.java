@@ -35,11 +35,19 @@ public class AgregarVehiculos extends Util.Constantes{
     public void TestAlRegistrarUnVehiculoDebeAvisarleAlUsuarioQueFueExitosoElRegistro() throws Throwable
     {
        
+        //para crear numeros aleatorios para guardar una placa diferente
         int numeroAleatorio = (int) (Math.random() * 4567) + 1;
        
-        elementoCapturado = driver.findElement(By.id("MainContent_txtPlaca"));
-        elementoCapturado.sendKeys(String.valueOf(numeroAleatorio));
         
+        
+        //se captura el elemento con driver y su ID y posteriormente se guarda en elementoCapturado
+        elementoCapturado = driver.findElement(By.id("MainContent_txtPlaca"));
+        elementoCapturado.sendKeys(String.valueOf(numeroAleatorio)); // se escribe en el campo el numero aleatorio
+        
+        
+        /* se captura de nuevo el elemento, si no se hace, queda recordando el anterior, se recomienda que si se hacen varios test a una pantalla capturar
+        Los elementos por variable de forma global para que se declaren solo 1 vez, para no declararlos de nuevo, en este caso como 
+        era un ejemplo con el fin de ilustrar y mostrar como funciona se declaran en todos los test*/
         
         elementoCapturado = driver.findElement(By.id("MainContent_txtColor"));
         elementoCapturado.sendKeys("Rojo");
