@@ -5,7 +5,7 @@
  */
 package Test;
 
-import static Util.Constantes.driver;
+
 import Util.Definidas;
 import static junit.framework.TestCase.assertTrue;
 

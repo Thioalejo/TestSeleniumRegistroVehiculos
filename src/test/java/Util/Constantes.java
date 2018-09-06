@@ -14,14 +14,14 @@ import org.openqa.selenium.WebElement;
  */
 public class Constantes {
 
-    public static WebDriver driver;
-    public static WebElement elementoCapturado;
-    public static WebElement BotonAdd;
-    public static String NavegadorChrome = "webdriver.chrome.driver";
-    public static String RutaNavegadorChrome = "chromedriver_win32\\chromedriver.exe";
+    protected static WebDriver driver;
+    protected static WebElement elementoCapturado;
+    protected static WebElement BotonAdd;
+    protected static String NavegadorChrome = "webdriver.chrome.driver";
+    protected static String RutaNavegadorChrome = "chromedriver_win32\\chromedriver.exe";
     
     //Esta url cambia cada que se ejecuta el proyecto
-    public static String URLBase ="http://localhost:7139/Views/Vehiculos";
+    protected static String URLBase ="http://localhost:7139/Views/Vehiculos";
     public Constantes() {
     }
 
